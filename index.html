@@ -14,13 +14,13 @@
     <script src="code.js" defer></script>
 </head>
 <body>
-<div class="columns has-centered" id="root">
-    <div class="column">
+<div class="columns is-centered" id="root">
+    <div class="column is-one-quarter">
         <input type="text" class="input" v-model="text">
 
-        <button v-on:click="addDeal">Добавить дело</button>
+        <button v-on:click="addDeal"  class="button is-dark">Добавить дело</button>
         <div v-for="item in todos">
-        <button class="button" v-bind:id="item[0]">{{item[1]}}  <span> <i class="material-icons" id="delete" v-on:click="deleteItem">delete</i></span></button>
+        <button class="button is-link is-large" v-bind:id="item[0]"   >{{item[1]}}  <span> <i class="material-icons" id="delete" v-on:click="deleteItem">delete</i></span></button>
         </div>
     </div>
 </div>
